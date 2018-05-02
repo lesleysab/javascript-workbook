@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 });
 
 // write a function that takes in 1 string (word) global
-pigLatin = (word) => {
+const pigLatin = (word) => {
   //define vowels
   const vowels = ["a", "e", "i", "o", "u"];
   //once vowels are identified, split the word and create a new variable
@@ -22,7 +22,7 @@ pigLatin = (word) => {
   } else {
     // we need a function that adds the letters before the vowel to the end of the string
     for (let index = 0; index < word.length; index++) {
-      //cycle the array through the string 
+      //cycle the array through the string
       //if there is not a vowel at the beginning of the string,
       if (!vowels.includes(word[index])) {
         //then split the string
