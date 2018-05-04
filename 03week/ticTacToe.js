@@ -28,6 +28,7 @@ function printBoard() {
 
 
 function horizontalWin() {
+<<<<<<< Updated upstream
   board.forEach(function(item) {
     console.log()
   });
@@ -37,10 +38,15 @@ function horizontalWin() {
   //check 2nd array 1 and all elements for x, y. and all positions are returned, then x or y wins
   //check 3rd array 2 and all elements for x, y. and all positions are returned, then x or y wins
 
+=======
+  // winner combos is array 0 in 0 1 2 || array 1 in 0, 1, 2 || in array 2 in 0, 1, 2
+  // console.log(board[0][0])
+>>>>>>> Stashed changes
 }
 
 function verticalWin() {
 
+<<<<<<< Updated upstream
   board.forEach(function(item) {
     console.log()
   });
@@ -59,6 +65,9 @@ function verticalWin() {
   //check element 2 in array 1 for x,y
   //check element 2 in array 2 for xy
   //then x,y wins
+=======
+  // winner combos in array 0 index 0 + in array 1 index 0 + array 2 index 0 || array 0 index 1 + array 1  index 1 + array 2 index 1 || array 0 index 2 + array 1 index 2 + array 2 index 2
+>>>>>>> Stashed changes
 }
 
 function diagonalWin() {
@@ -79,6 +88,7 @@ function checkForWin() {
 
 function ticTacToe(row, column) {
   // Your code here
+<<<<<<< Updated upstream
   //player 1 places X on board
   //player 2 places O on board, but not where there is an X or an O
   //player 1 places X on board, but not where there is an X or O
@@ -90,6 +100,10 @@ function ticTacToe(row, column) {
   //   } else {
   //     return "O"
   //   }
+=======
+  //is space empty? if yes, place x or o.
+  // board[0][0] = 'X'
+>>>>>>> Stashed changes
 }
 
 function getPrompt() {
