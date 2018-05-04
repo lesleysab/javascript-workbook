@@ -20,35 +20,65 @@ function printStacks() {
 }
 
 function movePiece() {
-  // Your code here
-  //there are 3 stacks. abc
-  //4 discs 1234 start on stack a.
-  //click on smallest disc to move to another stack. b or c
-  //large disc cannot be placed on top of a smaller disc.
-  //win = all 4 discs are stacked in order 1234 on stack c.
+
+  let stack1 = stacks.a
+  let stack2 = stacks.b
+  let stack3 = stacks.c
+  let disc1 = "x"
+
 
 
 }
 
+
+// Your code here
+//I will use if/else statements to move discs on stacks.
+//there are 3 stacks. abc
+//startStack is 4 discs 234 start on stack a.
+//if startStack is a, else endStack can be stack b or c
+//if startStack is b, else end Stack can be stack a or c.
+// if startStack is c, then endStack can be a or b.
+//large disc cannot be placed on top of a smaller disc. run isLegal
+//myArray.push("this"); // push a string on the stack
+// var a = myArray.pop(); // pops the last element from the stack
+// console.log(a); // prints "!"
+// console.log(myArray); // prints ["this", "is", "neat"]
+
+
+
+
+
 function isLegal() {
   // Your code here
+  //a disc can move across any stack
+  //large disc cannot be placed on top of a smaller disc.
+  //I will need to use an if/else statement to determine if the move is legal or not legal.
+  //I will need to use a for loop (forEach) to determine the items in each array.
+  // if disc is 1 or 2 or 3 or 4 and stack contains no discs, then move is legal.
+  //if disc is 1 and stack contains disc 2 or 3 or 4, then move is legal.
+  // if disc is 2 and stack contains disc 1, then move is not legal. If it contains disc 3 or disc 4, then it's legal.
+  // if disc is 3 and stack contains disc 1 or disc 2, then move is not legal. If it contains disc 4, then it's legal.
+  // if disc is 4 and stack contains 1 or 2 or 3, then move is not legal.
+  //Legal move – move one piece at a time, piece can go only on the bigger piece or on the empty spot
 
 }
 
 function checkForWin() {
   // Your code here
-
+  //a win is true when in the stacks variable in object c, 4321 is in the array.
+  //I will use an if/else statement to check for true/false and probably need a for loop (forEach) to check for the items in teh array.
+  let win = stacks.c.length;
+  if (win === 4) {
+    return movePiece
+  } else {
+    //don't allow item to move
+  }
 }
+
 
 function towersOfHanoi(startStack, endStack) {
   // Your code here
-  // Move disk from stack  A  to stack  c
-  // Move disk from stack  a  to stack  b
-  // Move disk from   stack c to stack  b
-  // Move disk from stack  a  to stack  c
-  // Move disk from stack  b  to stack  a
-  // Move disk from stack  b  to stack  c
-  // Move disk from stack  a  to stack  c
+  //it's a loop that calls movePiece for each element in the stack to the endStack
 
 }
 
