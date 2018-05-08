@@ -86,8 +86,12 @@ const resetGame = () => {
   if (stacks.c.length == 4) {
     stacks.c.length = 0;
     stacks.a = [4, 3, 2, 1]
+  } else if (stacks.b.length == 4) {
+    stacks.b.length = 0;
+    stacks.a = [4, 3, 2, 1]
   }
 }
+
 const getPrompt = () => {
   printStacks();
   rl.question('start stack: ', (startStack) => {
