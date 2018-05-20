@@ -2,7 +2,7 @@
 
 let assert = require('assert');
 
-let jobTypes = {
+const jobTypes = {
   pilot: 'MAV',
   mechanic: 'Repair Ship',
   commander: 'Main Ship',
@@ -17,63 +17,9 @@ class CrewMember {
     this.specialSkill = specialSkill;
     this.ship = null;
   }
-}
-
-const enterShip = () => {
-
-
-};
-
-const crewMember1 = new CrewMember("Rick Martinez", "pilot", "chemistry");
-crewMember1.ship = "MAV";
-// console.log(crewMember1.ship);
-// console.log(crewMember1);
-// console.log(crewMember1.name);
-// console.log(crewMember1.job);
-// console.log(crewMember1.specialSkill);
-
-
-const crewMember2 = new CrewMember('Commander Lewis', 'commander', 'geology');
-// console.log(crewMember2);
-
-
-class Ship {
-  constructor(name, type, ability, crew) {
-    this.name = name;
-    this.type = type;
-    this.ability = ability;
-    this.crew = null;
-  }
-}
-
-const missionStatement = () => {
-
-};
-
-const MAV = new Ship("Mars Ascent Vehicle", 'MAV', 'Ascend into low orbit');
-// console.log(MAV);
-// MAV.crew = crew.length;
-
-
-
-const hermes = new Ship("Hermes", 'Main Ship', 'Interplanetary Space Travel');
-// console.log(hermes);
-
-
-
-
-
-class CrewMember {
-  constructor(name, job, specialSkill) {
-    this.name = name;
-    this.job = job;
-    this.specialSkill = specialSkill;
-    this.ship = null;
-  }
   enterShip(ship) {
     this.ship = ship;
     ship.crew.push(this.name);
-    this.missionStatement = missionStatement;
     console.log(ship);
   }
 }
@@ -96,10 +42,16 @@ class Ship {
     this.ability = ability;
     this.crew = [];
   }
-  // missionStatement(Ship) {
-  //   this.missionStatement = missionStatement;
-  //   // console.log(this.missionStatement);
-  // }
+  missionStatement(Ship) {
+    if (!this.crew.length) {
+      console.log("Can't perform a mission yet.")
+      return "Can't perform a mission yet."
+    } else {
+      console.log(this.ability);
+      return this.ability;
+    }
+    // console.log(this.missionStatement);
+  }
 }
 const MAV = new Ship("Mars Ascent Vehicle", 'MAV', 'Ascend into low orbit');
 MAV.missionStatement = "Ascend into low orbit";
