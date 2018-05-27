@@ -9,8 +9,36 @@ const rl = readline.createInterface({
 
 
 function Checker() {
+  class Player {
+    constructor(name, color) {
+      this.name = name;
+      this.color = color;
+      this.startBoard = [
+        [, , , , , , , ],
+        [, , , , , , , ],
+        [, , , , , , , ],
+        [, , , , , , , ],
+        [, , , , , , , ],
+        [, , , , , , , ],
+        [, , , , , , , ]
+      ];
+    }
+
+  }
+  checkforWin = () => {
+    if (!player1.startBoard.length) {
+      return "player2 wins"
+    } else {
+      return "player1 wins"
+    }
+    this.grid = []
+  }
+
   // Your code here
-}
+  const player1 = new Player(Player1, red, startBoard["", "", "", "", "", "", "", ], [, , , , , , , ], [, , , , , , , ], [, , , , , , , ], ["O", , "0", , "O", , "O", ], [, "O", , "O", , "O", , "O"], ["O", , "0", , "O", , "O", ]];
+);
+const player2 = new Player(Player2, black, startBoard["X", , "X", , "X", , "X", ], [, "X", , "X", , "X", , "X"], ["X", , "X", , "X", , "X", ], [, , , , , , , ], [, , , , , , , ], [, , , , , , , ], [, , , , , , , ]];
+);
 
 class Board {
   constructor() {
@@ -61,6 +89,21 @@ class Game {
   }
   start() {
     this.board.createGrid();
+    moveChecker(whichPiece, toWhere {
+        let piece = whichPiece.splice()
+        let where = toWhere.splice()
+      }
+
+      isValid = row is 0 - 7, column 0 - 7
+      // isLegalMove = (whichPiece, toWhere) => {
+      //   whichPiece belongs to other player
+      //   toWhere is = null &&
+      //     is(+1 rows || -1 rows indexes in the array) && (+1 columns || -1 columns indexes in the array)
+      //   is killMove = toWhere is = the other players piece &&
+      //     is(+2 rows || -2 rows indexes in the array) && (+2 columns || -2 columns indexes in the array)
+      // if isKillMove, then remove the piece from the board
+      // }
+    }
   }
 }
 
