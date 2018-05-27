@@ -39,7 +39,6 @@ console.log(sumEvens);
 // }
 
 // create a similar object for the pi array.
-
 const newCount = {};
 // return an object called newCount
 let i;
@@ -67,5 +66,5 @@ const find512 = (value) => {
   return value === 512;
 }
 //loop through the new array to find the first instance of 512. I will use findIndex.
-const atxIdx = nums2.findIndex(find512);
+const atxIdx = nums2g.findIndex(find512);
 console.log(`index: ${atxIdx}, value: ${nums[atxIdx]}`);
