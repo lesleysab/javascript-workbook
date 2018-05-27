@@ -39,18 +39,13 @@ console.log(sumEvens);
 // }
 
 // create a similar object for the pi array.
-const newCount = {};
 // return an object called newCount
-let i;
 //loop through the array to count the numbers
-strNums.forEach(function(i) {
-  const num = strNums[i];
-  if (newCount[num] === undefined) {
-    newCount[num] = 0;
-  }
-  newCount[num]++;
-});
-console.log(newCount);
+const count = (arr) => {
+  return arr.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), {})
+}
+const numCount = count(strNums);
+console.log(numCount);
 
 // Find the index of the first "Austin" value (the value plus its index equals 512)
 //change the strings to numbers ^^
