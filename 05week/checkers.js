@@ -7,6 +7,27 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+//Start:
+//input 2digit number from
+//input 2 digit number to
+//split each number into an wrray to find row and column
+
+//Move checker
+//is method on game class = moveto space
+
+//isValid
+//check that the row and column is 0-7
+//and first player
+
+//isLegal
+//from and to are +- 1 row and +- 1 column
+
+//kill
+//from and to are +- 2 row and +- 2 column and
+//check who owns piece that is being hopped
+//get rid of that piece
+
+
 
 function Checker() {
   class Player {
