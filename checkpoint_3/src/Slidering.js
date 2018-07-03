@@ -18,20 +18,17 @@ class Slidering extends Component {
       <Slider>
         <Slide
           src="http://lorempixel.com/580/250/nature/1"
-          title="This is our big Tagline!">
-          'Here is our small slogan.'
+          title="Turn your town into a Team">
         </Slide>
         <Slide
           src="http://lorempixel.com/580/250/nature/2"
-          title="Left aligned Caption"
+          title="Find Resources to help solve unmet social needs"
           placement="left">
-          'Here is our small slogan.'
         </Slide>
         <Slide
           src="http://lorempixel.com/580/250/nature/3"
-          title="Right aligned Caption"
+          title="Refer Clients to those who can help"
           placement="right">
-          'Here is our small slogan.'
         </Slide>
       </Slider>
     </div>

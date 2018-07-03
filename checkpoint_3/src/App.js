@@ -1,10 +1,12 @@
-'use strict';
+import React, { Component } from 'react';
+import {Input} from "react-materialize";
+import {Button} from "react-materialize";
+import Navigation from './Navigation.js';
+import Slidering from './Slidering.js';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
 
 
-class Home extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,12 +15,12 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    const mapCenter = new google.maps.LatLng(-33.8617374,151.2021291);
-    this.map = new google.maps.Map(document.getElementById('map'), {
+    const mapCenter = new window.google.maps.LatLng(-33.8617374,151.2021291);
+    this.map = new window.google.maps.Map(document.getElementById('map'), {
        center: mapCenter,
        zoom: 15
      });
-    this.service = new google.maps.places.PlacesService(this.map);
+    this.service = new window.google.maps.places.PlacesService(this.map);
   }
 
   onSubmit = (e) => {
@@ -33,7 +35,7 @@ class Home extends React.Component {
   }
 
   receivePlaceInfo = (results, status) => {
-    console.log(results);
+    // console.log(results);
     this.setState({
       addresses: results
     })
@@ -41,22 +43,24 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+    <div>
+      <Navigation />
+      <Slidering />
         <div>
-          <h1>Site template</h1>
-          <p>Cell:</p>
-          <form className="form" onSubmit={this.onSubmit}>
-            <input type="text" />
-            <button type="submit">Submit</button>
-          </form>
+            <h4>Search for a Place</h4>
+            <form className="form" onSubmit={this.onSubmit}>
+              <input type="text" />
+              <button type="submit">Submit</button>
+            </form>
           {this.state.addresses ? (
-            <div className ="map">
+          <div>
               <ul>
                 {this.state.addresses.map((item, index) => {
                   return (
                     <li key={index}>
                       <p>{`Name: ${item.name}`}</p>
                       <p>{`Address: ${item.formatted_address}`}</p>
+                      <button type = "submit">Contact</button>
                     </li>
                   )
                 })}
@@ -69,4 +73,4 @@ class Home extends React.Component {
   }
 }
 
-module.exports = Home;
+export default App;

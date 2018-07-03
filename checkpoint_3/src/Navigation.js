@@ -15,9 +15,9 @@ class Navigation extends Component {
   render() {
     return (
     <div>
-        <Navbar brand='logo' left>
-          <NavItem href='get-started.html'>Getting started</NavItem>
-          <NavItem href='components.html'>Components</NavItem>
+        <Navbar brand='Team Town' left>
+          <NavItem href='get-started.html'>Home</NavItem>
+          <NavItem href='components.html'>Search</NavItem>
         </Navbar>
     </div>
     );
